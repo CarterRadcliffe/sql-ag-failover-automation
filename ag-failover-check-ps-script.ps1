@@ -12,7 +12,7 @@ Write-Output "`n"
 # 
 # ideal primary - xxxxxxxxxxxxx\xxxxxx
 try {   
-    $ag_listener  = ''
+    $ag_listener  = 'xxxxxxxxx'
     $ag_replicas  = Get-DbaAgReplica -SqlInstance $ag_listener
     $ag_agName    = $ag_replicas | Select-Object -expandProperty AvailabilityGroup
     $ag_curPrim   = $ag_replicas | Where-Object Role -eq Primary | Select-Object -ExpandProperty name
